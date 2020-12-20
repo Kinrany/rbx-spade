@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Tool" referent="RBX63DE965692654491959C765D23CF73D2">
+	<Item class="Tool" referent="RBXCFA73C03079C4B499ECFD91FC0560801">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<bool name="CanBeDropped">true</bool>
@@ -22,14 +22,14 @@
 				<R22>1</R22>
 			</CoordinateFrame>
 			<bool name="ManualActivationOnly">false</bool>
-			<string name="Name">Tool 2</string>
+			<string name="Name">spade</string>
 			<bool name="RequiresHandle">true</bool>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
 			<Content name="TextureId"><null></null></Content>
 			<string name="ToolTip"></string>
 		</Properties>
-		<Item class="Part" referent="RBXD9EE65ED7C82424B946E452DF29D0581">
+		<Item class="Part" referent="RBX4903362C0BD64DF8B437BD226194A72B">
 			<Properties>
 				<bool name="Anchored">false</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -42,9 +42,9 @@
 				<token name="BottomSurface">0</token>
 				<token name="BottomSurfaceInput">0</token>
 				<CoordinateFrame name="CFrame">
-					<X>0.5</X>
-					<Y>0.700000048</Y>
-					<Z>0.5</Z>
+					<X>3.53902578e-08</X>
+					<Y>1.17501116</Y>
+					<Z>2.98023224e-08</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -58,7 +58,7 @@
 				<bool name="CanCollide">true</bool>
 				<bool name="CastShadow">true</bool>
 				<int name="CollisionGroupId">0</int>
-				<Color3uint8 name="Color3uint8">4288914085</Color3uint8>
+				<Color3uint8 name="Color3uint8">4286539589</Color3uint8>
 				<PhysicalProperties name="CustomPhysicalProperties">
 					<CustomPhysics>false</CustomPhysics>
 				</PhysicalProperties>
@@ -106,7 +106,7 @@
 				</Vector3>
 			</Properties>
 		</Item>
-		<Item class="Part" referent="RBXBE488258E6374964B5AC7D2CBC051FAF">
+		<Item class="Part" referent="RBXD6FDB5727B2847D68884A294C4CE6C82">
 			<Properties>
 				<bool name="Anchored">false</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -119,9 +119,9 @@
 				<token name="BottomSurface">0</token>
 				<token name="BottomSurfaceInput">0</token>
 				<CoordinateFrame name="CFrame">
-					<X>0.474999964</X>
-					<Y>2.2742188</Y>
-					<Z>0.49999997</Z>
+					<X>-0.0250000004</X>
+					<Y>2.74922991</Y>
+					<Z>0</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -135,7 +135,7 @@
 				<bool name="CanCollide">true</bool>
 				<bool name="CastShadow">true</bool>
 				<int name="CollisionGroupId">0</int>
-				<Color3uint8 name="Color3uint8">4288914085</Color3uint8>
+				<Color3uint8 name="Color3uint8">4286479998</Color3uint8>
 				<PhysicalProperties name="CustomPhysicalProperties">
 					<CustomPhysics>false</CustomPhysics>
 				</PhysicalProperties>
@@ -149,7 +149,7 @@
 				<token name="LeftSurfaceInput">0</token>
 				<bool name="Locked">false</bool>
 				<bool name="Massless">false</bool>
-				<token name="Material">512</token>
+				<token name="Material">1088</token>
 				<string name="Name">Head</string>
 				<float name="Reflectance">0</float>
 				<float name="RightParamA">-0.5</float>
@@ -182,7 +182,7 @@
 					<Z>0.800000012</Z>
 				</Vector3>
 			</Properties>
-			<Item class="Weld" referent="RBX5ABAAE0D1C6F4DE68FF7AF2BCC28E7A6">
+			<Item class="Weld" referent="RBX5FC60CC806E549B09590A1C53A381F95">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<CoordinateFrame name="C0">
@@ -215,8 +215,8 @@
 					</CoordinateFrame>
 					<bool name="Enabled">true</bool>
 					<string name="Name">Weld</string>
-					<Ref name="Part0">RBXBE488258E6374964B5AC7D2CBC051FAF</Ref>
-					<Ref name="Part1">RBXD9EE65ED7C82424B946E452DF29D0581</Ref>
+					<Ref name="Part0">RBXD6FDB5727B2847D68884A294C4CE6C82</Ref>
+					<Ref name="Part1">RBX4903362C0BD64DF8B437BD226194A72B</Ref>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
 				</Properties>
