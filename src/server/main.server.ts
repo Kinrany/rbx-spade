@@ -1,6 +1,8 @@
 export {};
 
 const workspace = game.GetService("Workspace");
+const starterPack = game.GetService("StarterPack");
+const replicated = game.GetService("ReplicatedStorage");
 
 // create the player spawn
 const spawnPlatformSize = 25;
@@ -17,3 +19,12 @@ const slateRegion = new Region3(
 	new Vector3(-spawnPlatformSize, slateRegionSize, slateRegionSize),
 );
 workspace.Terrain.FillRegion(slateRegion, 4, Enum.Material.Slate);
+
+const spade = replicated.FindFirstChild("Models")?.FindFirstChild("spade")?.Clone();
+const spadeScript = replicated.FindFirstChild("TS")?.FindFirstChild("models")?.FindFirstChild("spade")?.Clone();
+if (spade && spadeScript) {
+	spadeScript.Parent = spade;
+	spade.Parent = starterPack;
+} else {
+	error('Expected to find model and script named "spade"');
+}
