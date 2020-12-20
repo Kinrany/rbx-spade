@@ -15,8 +15,10 @@ workspace.Terrain.FillRegion(spawnPlatformRegion, 4, Enum.Material.WoodPlanks);
 // create the slate wall
 const slateRegionSize = 1000;
 const slateRegion = new Region3(
-	new Vector3(-slateRegionSize, -slateRegionSize, -slateRegionSize),
-	new Vector3(-spawnPlatformSize, slateRegionSize, slateRegionSize),
+	// starting with: right of platform, far down, far backward
+	new Vector3(spawnPlatformSize, -slateRegionSize, -slateRegionSize),
+	// ending with: far right, far up, far forward
+	new Vector3(slateRegionSize, slateRegionSize, slateRegionSize),
 );
 workspace.Terrain.FillRegion(slateRegion, 4, Enum.Material.Slate);
 
