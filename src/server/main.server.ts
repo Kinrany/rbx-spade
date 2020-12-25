@@ -22,10 +22,16 @@ const slateRegion = new Region3(
 );
 workspace.Terrain.FillRegion(slateRegion, 4, Enum.Material.Slate);
 
-const spade = replicated.FindFirstChild("Models")?.FindFirstChild("spade")?.Clone();
-const spadeScript = replicated.FindFirstChild("TS")?.FindFirstChild("models")?.FindFirstChild("spade")?.Clone();
-if (spade && spadeScript) {
-	spadeScript.Parent = spade;
+const spade = replicated.FindFirstChild("Models")?.FindFirstChild("spade");
+const spadeScript = replicated.FindFirstChild("TS")?.FindFirstChild("models")?.FindFirstChild("spade");
+const spadeLocalScript = replicated
+	.FindFirstChild("TS")
+	?.FindFirstChild("models")
+	?.FindFirstChild("spadeLocal")
+	?.Clone();
+if (spade && spadeScript && spadeLocalScript) {
+	spadeScript.Clone().Parent = spade;
+	spadeLocalScript.Clone().Parent = spade;
 	spade.Parent = starterPack;
 } else {
 	error('Expected to find model and script named "spade"');

@@ -1,3 +1,5 @@
+dependencies:
+  '@rbxts/t': 2.1.0
 devDependencies:
   '@rbxts/compiler-types': 1.0.0-beta.10.0
   '@rbxts/types': 1.0.430
@@ -74,10 +76,20 @@ packages:
     dev: true
     resolution:
       integrity: sha512-nP7n2G3wVs1VcI/kHTe/LUdjVhROTKYLyV+wKHyMQ5AawUy5Ivg1p+p5Nt8UnEekzlqxs+zI9sJDFr+tBxx52A==
+  /@rbxts/t/2.1.0:
+    dependencies:
+      '@rbxts/types': 1.0.431
+    dev: false
+    resolution:
+      integrity: sha512-GxPX2jDHD2bL2fzQfFfIlfC0zzgWco5gVCFzmuIxbutR6dbUVY57UJCju0P3Ep+q7Qx94b9cz9GOmnm/Odrk3g==
   /@rbxts/types/1.0.430:
     dev: true
     resolution:
       integrity: sha512-4lnqkkfjjTXD5v//avKVpp9mRy6uqwMbgYJvqbK2RaS1ZIJbWuP87rAxdTRQA5puQRxhxuuwnw2GxgJ4v4EHiw==
+  /@rbxts/types/1.0.431:
+    dev: false
+    resolution:
+      integrity: sha512-bVF0kPsB8qdjR7+45giJ7M+hIGV++NmnmL9k5b2oA+p8IS+T8Elzffq1yVKI1Tq5UTzHqFXxoaybUb3/ERVn1Q==
   /@types/json-schema/7.0.6:
     dev: true
     resolution:
@@ -1109,6 +1121,7 @@ packages:
       integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 specifiers:
   '@rbxts/compiler-types': ^1.0.0-beta.10.0
+  '@rbxts/t': ^2.1.0
   '@rbxts/types': ^1.0.430
   '@typescript-eslint/eslint-plugin': ^4.10.0
   '@typescript-eslint/parser': ^4.10.0
