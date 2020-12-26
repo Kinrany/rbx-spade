@@ -11,9 +11,7 @@ if (!parent || !parent.IsA("Tool")) {
 
 const tool = parent;
 
-const activated = new Instance("BoolValue", tool);
-activated.Name = "Activated";
-activated.Value = false;
+let activated = false;
 
 const updateRay = new Instance("RemoteEvent", tool);
 let ray = new Ray();
@@ -47,15 +45,15 @@ function dig() {
 }
 
 tool.Activated.Connect(() => {
-	activated.Value = true;
+	activated = true;
 });
 
 tool.Deactivated.Connect(() => {
-	activated.Value = false;
+	activated = false;
 });
 
 whileInstanceInWorkspace(tool, () => {
-	if (activated.Value) {
+	if (activated) {
 		dig();
 	}
 });

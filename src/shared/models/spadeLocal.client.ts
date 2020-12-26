@@ -11,14 +11,8 @@ if (!parent || !parent.IsA("Tool")) {
 
 const tool = parent;
 
-const activatedChild = tool.WaitForChild("Activated");
-if (!activatedChild || !activatedChild.IsA("BoolValue")) {
-	throw 'Expected tool to have a BoolValue named "Activated"';
-}
-const activated = activatedChild;
-
-const updateRayChild = tool.FindFirstChildWhichIsA("RemoteEvent");
-if (!updateRayChild) {
+const updateRayChild = tool.WaitForChild("RemoteEvent");
+if (!updateRayChild || !updateRayChild.IsA("RemoteEvent")) {
 	throw `Expected tool to have a RemoteEvent.`;
 }
 const updateRayEvent = updateRayChild;
