@@ -31,12 +31,13 @@ function dig() {
 		throw `Expected parent to have a Humanoid named "Humanoid", found ${humanoid?.ClassName}`;
 	}
 
-	const raycastResult = workspace.Raycast(ray.Origin, ray.Direction);
+	const params = new RaycastParams();
+	params.FilterType = Enum.RaycastFilterType.Whitelist;
+	params.FilterDescendantsInstances = [workspace.Terrain];
+
+	const raycastResult = workspace.Raycast(ray.Origin, ray.Direction.Unit.mul(1000), params);
 	if (raycastResult) {
-		print(`Filling ${raycastResult.Instance.Name} with air`);
 		workspace.Terrain.FillBall(raycastResult.Position, 5, Enum.Material.Air);
-	} else {
-		print(`Ray ${ray} didn't hit anything`);
 	}
 }
 

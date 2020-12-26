@@ -26,7 +26,7 @@ const updateRayEvent = updateRayChild;
 function updateRay() {
 	if (workspace.CurrentCamera) {
 		const cursorPos = input.GetMouseLocation();
-		const ray = workspace.CurrentCamera.ViewportPointToRay(cursorPos.X, cursorPos.Y, 100);
+		const ray = workspace.CurrentCamera.ViewportPointToRay(cursorPos.X, cursorPos.Y);
 		updateRayEvent.FireServer(ray);
 	}
 }
