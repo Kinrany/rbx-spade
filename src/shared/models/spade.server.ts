@@ -25,6 +25,8 @@ updateRay.OnServerEvent.Connect((_player, newRay) => {
 	}
 });
 
+const maxDiggingDistance = 20;
+
 function dig() {
 	const humanoid = tool.Parent?.FindFirstChild("Humanoid");
 	if (!humanoid || !humanoid.IsA("Humanoid")) {
@@ -36,8 +38,11 @@ function dig() {
 	params.FilterDescendantsInstances = [workspace.Terrain];
 
 	const raycastResult = workspace.Raycast(ray.Origin, ray.Direction.Unit.mul(1000), params);
-	if (raycastResult) {
-		workspace.Terrain.FillBall(raycastResult.Position, 5, Enum.Material.Air);
+	if (raycastResult && humanoid.RootPart) {
+		const distToCharacter = raycastResult.Position.sub(humanoid.RootPart.Position).Magnitude;
+		if (distToCharacter <= maxDiggingDistance) {
+			workspace.Terrain.FillBall(raycastResult.Position, 5, Enum.Material.Air);
+		}
 	}
 }
 
